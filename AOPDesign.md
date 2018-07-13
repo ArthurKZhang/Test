@@ -19,11 +19,11 @@ Map.put(......)
 ```
 这种情况第二句不能引起m打印log。
 
-##2. 性能监控
-####2.1. 方法耗时-->日志已满足
-####2.2. 出入参数打印-->日志已满足
-####2.3. Trace-->日志已满足
-####2.4. 页面加载耗时
+## 2. 性能监控
+#### 2.1. 方法耗时-->日志已满足
+#### 2.2. 出入参数打印-->日志已满足
+#### 2.3. Trace-->日志已满足
+#### 2.4. 页面加载耗时
 针对性能监控的页面加载耗时检测，给出自定义注解
 ```
 @PageLoadTime{
@@ -33,19 +33,19 @@ int type  log类型，默认debug
 }
 ```
 针对Activity 和 Fragment, 跟踪Activity和Fragment的生命周期中的回调方法来进行耗时计算。**但是**，Activity和Fragment类中需要显示的出现相应的方法，即必须要override方法。 
-#####1. Activity类中必须存在两个方法：
+##### 1. Activity类中必须存在两个方法：
 ```
 @override onCreate()
 @override onWindowFocusChanged()
 ```
-#####2. Fragment类中必须存在两个方法：
+##### 2. Fragment类中必须存在两个方法：
 ```
 @override onCreate()
 @override onResume()
 ```
 
 
-##3. 动态权限检查
+## 3. 动态权限检查
 自定义注解
 ```
 @CheckPermission{
@@ -65,7 +65,7 @@ boolean runIgnorePermission() default false;是否无视权限继续方法
 ```
 
 
-##4. 代码异常保护
+## 4. 代码异常保护
 自定义注解
 ```
 @HandleException{
